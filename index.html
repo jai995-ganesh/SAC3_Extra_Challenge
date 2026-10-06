@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAC-3 Extra Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Multi-Column Grid</h1>
+
+    <div class="controls">
+      <label>
+        Number of Columns:
+        <input id="columnCount" type="number" min="1" max="12" value="4">
+      </label>
+      <button id="minusBtn">−</button>
+      <button id="plusBtn">+</button>
+    </div>
+
+    <p class="hint">Drag columns to reorder them, or use the Order box.</p>
+
+    <div id="grid" class="grid"></div>
+  </div>
+
+  <div id="editModal" class="modal hidden">
+    <div class="modal-box">
+      <h2>Edit Column</h2>
+
+      <label>
+        Title
+        <input id="titleInput" type="text">
+      </label>
+
+      <label>
+        Color
+        <input id="colorInput" type="text" placeholder="#e3f2fd">
+      </label>
+
+      <div class="color-options">
+        <button data-color="#e3f2fd" style="background:#e3f2fd"></button>
+        <button data-color="#fce4ec" style="background:#fce4ec"></button>
+        <button data-color="#e8f5e9" style="background:#e8f5e9"></button>
+        <button data-color="#fff3e0" style="background:#fff3e0"></button>
+        <button data-color="#ede7f6" style="background:#ede7f6"></button>
+      </div>
+
+      <div class="modal-actions">
+        <button id="saveBtn">Save</button>
+        <button id="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
